@@ -1,0 +1,20 @@
+{
+    "name": "iankov/control-panel-static",
+    "description": "Admin panel for laravel",
+    "require": {
+        "guzzlehttp/psr7": "^1.4",
+        "iankov/control-panel": "@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iankov\\ControlPanelStatic\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Iankov\\ControlPanelStatic\\": "src/"
+        }
+    }
+}
