@@ -1,9 +1,9 @@
 {
     "name": "iankov/control-panel-static",
-    "description": "Admin panel for laravel",
+    "description": "Static pages module for iankov/control-panel",
     "require": {
         "guzzlehttp/psr7": "^1.4",
-        "iankov/control-panel": "@dev"
+        "iankov/control-panel": "^1.0"
     },
     "extra": {
         "laravel": {
