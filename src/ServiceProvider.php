@@ -16,10 +16,6 @@ class ServiceProvider extends BaseProvider
         $this->loadViewsFrom(__DIR__.'/views', 'icp-static');
 
         $this->publishes([
-            __DIR__.'/config' => base_path('config'),
-        ], 'icp_static_config');
-
-        $this->publishes([
             __DIR__.'/views' => base_path('resources/views/vendor/iankov/control-panel-static'),
         ], 'icp_static_views');
     }
@@ -32,5 +28,9 @@ class ServiceProvider extends BaseProvider
     public function register()
     {
         include __DIR__.'/helpers.php';
+
+        $config = require __DIR__ . '/config.php';
+        $icp = $this->app['config']->get('icp', []);
+        $this->app['config']->set('icp', array_replace_recursive($config, $icp));
     }
 }
