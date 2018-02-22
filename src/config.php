@@ -9,17 +9,5 @@ return [
             ],
         ]
     ],
-    'menu' => [
-        'groups' => [
-            'other' => [
-                'items' => [
-                    'static' => [
-                        'icon' => 'file-text',
-                        'title' => 'Static',
-                        'icp_route' => 'static'
-                    ],
-                ]
-            ],
-        ],
-    ],
+
 ];
