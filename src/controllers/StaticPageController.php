@@ -12,7 +12,7 @@ class StaticPageController extends Controller
 
         $mimetype = \GuzzleHttp\Psr7\mimetype_from_filename($page->route);
         if(!$mimetype){
-            $mimetype = 'text/html'; //by default
+            $mimetype = config('icp.modules.static.mimetype', 'text/html'); //by default
         }
 
         return response($page->content)->header('Content-Type', $mimetype);
